@@ -5,7 +5,7 @@
              
              
 
-Launches an empty world in Gazebo and spawns a turtlebot3 burger at the desired coordinates and takes in an argument for whether we want the bot to move in a 'circle' or 'square'.
+Launches an empty world in Gazebo and spawns a turtlebot3 burger at (0,0,0) coordinate in the empty world model and takes in an argument for whether we want the bot to move in a 'circle' or 'square'.
 
 
 
