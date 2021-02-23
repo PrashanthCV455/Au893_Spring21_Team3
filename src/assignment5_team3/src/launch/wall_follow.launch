@@ -4,8 +4,8 @@
   <arg name="y_pos" default="0.0"/>
   <arg name="z_pos" default="0.0"/>
 
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find assignment4_Team3)/worlds/turtlebot3_wallfollowing.world"/>
+  <include file="$(find assignment5_team3)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find assignment5_Team3)/worlds/turtlebot3_wallfollowing.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
