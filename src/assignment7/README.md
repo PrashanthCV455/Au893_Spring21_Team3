@@ -23,6 +23,7 @@ Karto SLAM:
 
 Part 2 deals with the comparison between LDS lidar which is a default 2D lidar on turtlebot3 and Hokuyo 3D lidar.
 Configuration for Hokuyo lidar is done by following the instructions given in:
+
     i. http://amanbreakingthings.blogspot.com/2014/11/adding-hokuyo-lidar-to-turtlebot-in-ros.html
 
     ii. http://wiki.ros.org/turtlebot/Tutorials/indigo/Adding%20a%20lidar%20to%20the%20turtlebot%20using%20hector_models%20%28Hokuyo%20UTM-30LX%29
@@ -43,4 +44,4 @@ Slam node is run to save the map using both LDS_lidar and Hokuyo_lidar.
  2. Computational demand: Since Hokuyo_lidar took lesser time to generate the map it seemed to be computationally less demanding than LDS_lidar.
  3. Graphics: Hokuyo_lidar seemed to generate the map more accurately in lesser span of time compared to LDS_lidar which took more time to generate comparitively less accurate map. Hence, it seems like Hokuyo_lidar is graphically more demanding than LDS_lidar.
  4. Performance: Hokuyo_lidar has better performance when compared to LDS_lidar for the fact that the former is a 3D lidar whilst the latter is a 2D lidar.
- 5. Another reason for Hokuyo_lidar to generate a better map in less time is that it seemed to cover more area for every time step compared to LDS_lidar which could cover lesser area for a given time step. 
+ 5. Another reason for Hokuyo_lidar to generate a better map in less time is that it seemed to cover more area for every time step compared to LDS_lidar which could cover lesser area for a given time step.
