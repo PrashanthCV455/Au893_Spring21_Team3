@@ -8,8 +8,8 @@ from sensor_msgs.msg import Image
 from apriltag_ros.msg import AprilTagDetectionArray
 from move_robot import MoveTurtlebot3
 
-rot = 0
-fwd = 0
+z_axis = 0
+x_axis = 0
 
 
 class Apriltag_follower(object):
@@ -28,25 +28,25 @@ class Apriltag_follower(object):
         cv2.waitKey(1)
 
     def callback(self, data):
-        global rot, fwd
+        global z, x
         try:
-            rot = data.detections[0].pose.pose.pose.position.x - 0.09
-            fwd = data.detections[0].pose.pose.pose.position.z
+            z_axis = data.detections[0].pose.pose.pose.position.x - 0.1
+            x_axis = data.detections[0].pose.pose.pose.position.z
             vel_msg = Twist()
 	
-            Kp_fwd = 0.2    #proportional gains
-            Kp_rot = 1.8     #proportional gains
+            Kp_fwd = 0.2    #proportional gains for forward motion (wrt x-axis)
+            Kp_rot = 1.8     #proportional gains for rotation (wrt z-axis)
 
             flag= 0
             if fwd < 0.1:
                 vel_msg.linear.x = 0
             else:
-                vel_msg.linear.x = forward * Kp_forward
-                if rot < 0:
+                vel_msg.linear.x = x_axis * Kp_fwd
+                if z_axis < 0:
                     flag= 1
-                if rot > 0:
+                if z_axis > 0:
                     flag= -1
-                vel_msg.angular.z = flag* Kp_rot * abs(rot) / 2
+                vel_msg.angular.z = flag* Kp_rot * abs(z_axis) / 2
 
             self.publish.publish(vel_msg)
 
