@@ -44,9 +44,8 @@ class Apriltag_follower(object):
                 vel_msg.linear.x = x_axis * Kp_fwd
                 if z_axis < 0:
                     flag= 1
-                if z_axis > 0:
-                    flag= -1
-                vel_msg.angular.z = flag* Kp_rot * abs(z_axis) / 2
+
+                vel_msg.angular.z = -1*flag* Kp_rot * abs(z_axis) / 2
 
             self.publish.publish(vel_msg)
 
