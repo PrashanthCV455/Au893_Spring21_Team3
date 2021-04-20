@@ -1,13 +1,16 @@
 GROUP assignment files
+This repository contains all the files for respective assignments for the course AuE893 Autonomy: Science and Systems.
+These are the work compilation by TEAM 3 as part of AuE893
+It includes projects/assignments done in both Gazebo and in Real world using Turtlebot Burger.
 
-HW6 part 1: Line detection and Line follower:
+Team Members:
 
-Please follow the steps to run the code:
+- Aayush Rai
 
-1.Open roscore
+- Ananya Nagabhushana Rao
 
-2.Put the code below in terminal to run the line follower in Gazebo
+- Mengtao Zhao
 
-roslaunch assignment6_trackingandfollowing turtlebot3_follow_line.launch
+- Prashanth Chivkula
 
-3.check the line_follower.mp4 under videos/
+- Shahil Shaik
