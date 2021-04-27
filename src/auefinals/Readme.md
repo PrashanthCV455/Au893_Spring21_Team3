@@ -12,17 +12,18 @@ This folder includes he files for the final capstone project for the course AuE8
 
 The Turtlebot Burger will have to autonomously navigate through the Gazebo environment as shown below:
 
-PROJECT PROBLEM STATEMENT
+**PROJECT PROBLEM STATEMENT**
 
 The robot will have to complete the following tasks:
 
-Task 1: Wall following/Obstacle avoidance - The Turtlebot starts here. It must successfully follow the wall and avoid the obstacles until it reaches the yellow line. Create a map of this corridor using a SLAM package of your choice. (You could also come up with your own solution for wall following and obstacle avoidance).
+- Task 1: Wall following/Obstacle avoidance - The Turtlebot starts here. It must successfully follow the wall and avoid the obstacles until it reaches the yellow line. Create a map of this corridor using a SLAM package of your choice. (You could also come up with your own solution for wall following and obstacle avoidance).
 
-Task 2: Line following & Stop Sign Detection -The Turtlebot must successfully follow the yellow line. Stop Sign detection - While navigating the yellow line, the Turtlebot should stop at the stop sign for 3 seconds before continuing. The stop-sign will be detectedbyTinyYOLO
+- Task 2: Line following & Stop Sign Detection -The Turtlebot must successfully follow the yellow line. Stop Sign detection
+While navigating the yellow line, the Turtlebot should stop at the stop sign for 3 seconds before continuing. The stop-sign will be detectedbyTinyYOLO
 
-Task 3: AprilTag tracking - For this task you will need to spawn another TB3 in the environment in the empty space past the yellow line and attach an AprilTag to the robot. TheTB3 with the AprilTag will be teleoperated by the user and the preceding TB3 needs to track its motion.
+- Task 3: AprilTag tracking - For this task you will need to spawn another TB3 in the environment in the empty space past the yellow line and attach an AprilTag to the robot. TheTB3 with the AprilTag will be teleoperated by the user and the preceding TB3 needs to track its motion.
 
-INSTRUCTIONS
+**INSTRUCTIONS**
 
 - run roscore
 - ssh into the robot
