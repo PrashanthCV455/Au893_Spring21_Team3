@@ -25,17 +25,33 @@ The robot will have to complete the following tasks:
 
 **INSTRUCTIONS**
 
-. run roscore
-. ssh into the robot
-. launch turtlebot bring up
-. launch the camera node on the turtlebot
+- run roscore
+- ssh into the robot
+- launch turtlebot bring up
+- launch the camera node on the turtlebot
 
-- Launch the _turtlebot3_autonomy_final.launch_ launch file
+Launch the _turtlebot3_autonomy_final.launch_ launch file
 
-. This will launch the final world in an empty world with the turtlebot3 burger spawned in it.
-. Next the turtlebot3 burger will start performing the wall following task.
-. The bot will automatically switch from wall following to obstacle avoidance task once it comes across an obstacle in its path.
-. When the bot detects that there are no more obstacle on its way and the yellow line comes into view the bot will automatically switch to line following task.
-. As the bot is performing the line following task, when it detects the stop sign, it will stop for 3-4 seconds and then start following the line again till the yellow line goes out of its sight.
-. As the yellow line goes out of its sight and an april tag is in sight, the bot will start performing April Tag detection adn tracking.
-. As the April Tag is moved, the bot will automatically start following it until the AprilTag is removed from its camera frame. 
+- This will launch the final world in an empty world with the turtlebot3 burger spawned in it.
+- Next the turtlebot3 burger will start performing the wall following task.
+- The bot will automatically switch from wall following to obstacle avoidance task once it comes across an obstacle in its path.
+- When the bot detects that there are no more obstacle on its way and the yellow line comes into view the bot will automatically switch to line following task.
+- As the bot is performing the line following task, when it detects the stop sign, it will stop for 3-4 seconds and then start following the line again till the yellow line goes out of its sight.
+- As the yellow line goes out of its sight and an april tag is in sight, the bot will start performing April Tag detection adn tracking.
+- As the April Tag is moved, the bot will automatically start following it until the AprilTag is removed from its camera frame.
+
+**BONUS**
+
+Can you navigate the above course completely autonomously without the need to switch tasks with keyboard presses? What are the different ways you can implement this?
+
+We were able to fully automate the code seamlessly without the need for key presses to switch between tasks. This code is in scripts folder under the name main_mission.py
+
+**_Certain prerequisites_**
+
+- To properly launch the environment in Gazebo, set the GAZEBO_MODEL_PATH variable to point to models in auefinals package too. Use the following command to do so:
+
+exportGAZEBO_MODEL_PATH=~/path/to/workspace/src/aue_finals/models:~/path/to/workspace/src/turtlebot3_simulations/turtlebot3_gazebo/models
+
+- Download the environment, build your workspace and launch the world with the following command:
+
+roslaunch aue_finals turtlebot3_autonomy_final.launch
